@@ -4,12 +4,12 @@
 
 try {
 	if(ko.places.manager.currentPlaceIsLocal) {
-	  // I'm a cowboy programmer, I ain't need dat localhost stuff
+		// I'm a cowboy programmer, I ain't need dat localhost stuff
 		ko.dialogs.alert("Local places are not supported yet");
 		return;
 	}
 
-  // Closures are AWESOME!
+	// Closures are AWESOME!
 	var RCService = Cc["@activestate.com/koRemoteConnectionService;1"].getService(Ci.koIRemoteConnectionService);
 	var conn = RCService.getConnectionUsingUri(ko.places.manager.currentPlace);
 
@@ -52,7 +52,7 @@ try {
 		copyFileWorker();
 	};
 
-  // Function instead of while/for just because the Voices told me to do this.
+	// Function instead of while/for just because the Voices told me to do this.
 	copyFileWorker();
 } catch (ex) {
 	ko.dialogs.alert("Error: " + ex);
